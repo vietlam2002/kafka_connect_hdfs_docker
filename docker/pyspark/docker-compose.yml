@@ -1,0 +1,14 @@
+version: '3'
+services:
+
+  pyspark:
+      image: "jupyter/all-spark-notebook"
+      volumes:
+        - ".:/opt/spark/"
+      ports:
+        - 8888:8888
+      networks:
+        - kafka_docker_test_kafka_docker_test
+networks:
+  kafka_docker_test_kafka_docker_test:
+    external: true
